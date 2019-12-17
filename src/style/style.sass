@@ -12,9 +12,6 @@ $container-width: 960px
   display: grid
   grid-template-columns: 1fr 8fr
 
-.page
-  margin: 2rem
-
 .form-input
   display: flex
   flex-direction: column
@@ -54,6 +51,7 @@ $container-width: 960px
   background-color: blue
   height: 100vh
   padding: 1rem
+  margin-right: 1rem
 
   h1
     margin: 2rem 0
@@ -85,3 +83,27 @@ $container-width: 960px
 .page
   display: grid
   grid-template-columns: 1fr 1fr
+
+  .left
+    display: grid
+    grid-template-rows: 1fr 11fr
+    padding: 0 1rem
+
+    input, textarea
+      width: 100%
+      border: none
+      margin: 1rem 0
+
+    input:focus, textarea:focus
+      outline: none
+
+    .title
+      font-size: 36px
+      padding: 1rem 0
+      border-bottom: 3px solid blue
+
+    .user-input
+      font-size: 16px
+      //border: blue 2px solid
+      padding: 5px
+      text-align: start

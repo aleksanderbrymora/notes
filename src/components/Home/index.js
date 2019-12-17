@@ -4,6 +4,8 @@ import loader from "../Resources/loader.gif";
 
 const INITIAL_STATE = {
   isFetchDone: false,
+  title: '',
+  input: ''
 };
 
 class HomePage extends Component {
@@ -21,7 +23,12 @@ class HomePage extends Component {
       return (
         <div className={'page'}>
           <div className="left">
-            test
+            <input placeholder={'Title'} autoFocus className={'title'} />
+            <textarea
+                placeholder={'Your note...'}
+                className={'user-input'}
+                // rows={'30'}
+            />
           </div>
           <div className="right">
             test

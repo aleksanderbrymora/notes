@@ -11,10 +11,6 @@
   grid-template-columns: 1fr 8fr;
 }
 
-.page {
-  margin: 2rem;
-}
-
 .form-input {
   display: flex;
   flex-direction: column;
@@ -55,6 +51,7 @@
   background-color: blue;
   height: 100vh;
   padding: 1rem;
+  margin-right: 1rem;
 }
 .navigation h1 {
   margin: 2rem 0;
@@ -87,6 +84,29 @@
 .page {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+.page .left {
+  display: grid;
+  grid-template-rows: 1fr 11fr;
+  padding: 0 1rem;
+}
+.page .left input, .page .left textarea {
+  width: 100%;
+  border: none;
+  margin: 1rem 0;
+}
+.page .left input:focus, .page .left textarea:focus {
+  outline: none;
+}
+.page .left .title {
+  font-size: 36px;
+  padding: 1rem 0;
+  border-bottom: 3px solid blue;
+}
+.page .left .user-input {
+  font-size: 16px;
+  padding: 5px;
+  text-align: start;
 }
 
 /*# sourceMappingURL=style.css.map */
