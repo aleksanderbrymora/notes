@@ -52,6 +52,7 @@
   height: 100vh;
   padding: 1rem;
   margin-right: 1rem;
+  border-right: 4px solid deeppink;
 }
 .navigation h1 {
   margin: 2rem 0;
@@ -84,6 +85,7 @@
 .page {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 100vh;
 }
 .page .left {
   display: grid;
@@ -94,6 +96,8 @@
   width: 100%;
   border: none;
   margin: 1rem 0;
+  white-space: pre-wrap;
+  resize: none;
 }
 .page .left input:focus, .page .left textarea:focus {
   outline: none;
@@ -102,11 +106,30 @@
   font-size: 36px;
   padding: 1rem 0;
   border-bottom: 3px solid blue;
+  margin-right: 2rem;
+}
+.page .left .title button {
+  border: 2px solid blue;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 36px;
+  font-weight: bold;
+  color: black;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 .page .left .user-input {
   font-size: 16px;
   padding: 5px;
   text-align: start;
+}
+.page .right {
+  padding: 2rem;
+  overflow-y: scroll;
+}
+.page .right p {
+  white-space: pre-wrap;
 }
 
 /*# sourceMappingURL=style.css.map */

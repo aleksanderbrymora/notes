@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "@tonejs/midi": "^2.0.15",
     "firebase": "^7.6.0",
+    "markdown-it": "^10.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
