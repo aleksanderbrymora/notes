@@ -17,6 +17,8 @@ class HomePage extends Component {
   }
 
   async componentDidMount() {
+    // TODO fetch all the notes
+    // TODO Update current note
     this.setState({ isFetchDone: true });
   }
 

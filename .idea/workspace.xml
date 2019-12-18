@@ -2,38 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04b3d6d5-cba9-4169-9cd8-2d33ab6ed562" name="Default Changelist" comment="added local storage, and user persistence, updated the gitignore">
-      <change afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/precache-manifest.1c174f35dfeb6425cd8b51de051f6710.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/css/main.3bff5d13.chunk.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/css/main.3bff5d13.chunk.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/2.75c145b6.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/2.75c145b6.chunk.js.LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/2.75c145b6.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/main.fff528c4.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/main.fff528c4.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/runtime-main.7a3e7d9d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/runtime-main.7a3e7d9d.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/media/loader.dde0ed76.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/.sass-cache/1fe9cbbd729ea3d32eceff89fd7b48385dbb96bf/style.sassc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Firebase/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Firebase/firebase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Firebase/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Firebase/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Session/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Session/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Session/withAuthentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Session/withAuthentication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SignUp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignUp/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/style.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +66,7 @@
       <updated>1576560507690</updated>
       <workItem from="1576560509069" duration="16037000" />
       <workItem from="1576619808349" duration="7428000" />
+      <workItem from="1576633383476" duration="1124000" />
     </task>
     <task id="LOCAL-00001" summary="Added styling, scaffold is pretty much done (oh im so wrong...)">
       <created>1576570434247</created>
@@ -122,10 +93,10 @@
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="1013" y="482" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576560542723" />
-    <state x="474" y="23" width="912" height="877" key="CommitChangelistDialog2" timestamp="1576633354911">
+    <state x="474" y="23" width="912" height="877" key="CommitChangelistDialog2" timestamp="1576633506829">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="474" y="23" width="912" height="877" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1576633354911" />
+    <state x="474" y="23" width="912" height="877" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1576633506829" />
     <state x="843" y="247" width="864" height="981" key="CommitChangelistDialog2/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576570434185" />
     <state x="822" y="514" width="906" height="448" key="EditFileWatcherDialog" timestamp="1576571383665">
       <screen x="0" y="27" width="2560" height="1413" />
