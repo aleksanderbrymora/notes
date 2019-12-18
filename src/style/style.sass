@@ -90,6 +90,7 @@ $container-width: 960px
     display: grid
     grid-template-rows: 1fr 11fr
     padding: 0 1rem
+    max-height: 100vh
 
     input, textarea
       width: 100%
@@ -102,6 +103,7 @@ $container-width: 960px
       outline: none
 
     .title
+      font-weight: bold
       font-size: 36px
       padding: 1rem 0
       border-bottom: 3px solid blue
@@ -127,6 +129,11 @@ $container-width: 960px
   .right
     padding: 2rem
     overflow-y: scroll
+
+    h1
+      color: deeppink
+      margin-bottom: 2rem
+      font-size: 36px
 
     p
       white-space: pre-wrap

@@ -55,7 +55,6 @@ class HomePage extends Component {
           <div className="right">
             <h1>{this.state.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: this.state.parsed }} />
-            {/*<ParsedMarkdown markdown={this.state.parsed} />*/}
           </div>
         </div>
       );
