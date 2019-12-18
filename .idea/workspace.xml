@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04b3d6d5-cba9-4169-9cd8-2d33ab6ed562" name="Default Changelist" comment="added local storage, and user persistence, updated the gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Session/withAuthentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Session/withAuthentication.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +68,7 @@
       <workItem from="1576560509069" duration="16037000" />
       <workItem from="1576619808349" duration="7428000" />
       <workItem from="1576633383476" duration="1124000" />
+      <workItem from="1576635642410" duration="650000" />
     </task>
     <task id="LOCAL-00001" summary="Added styling, scaffold is pretty much done (oh im so wrong...)">
       <created>1576570434247</created>
