@@ -13,7 +13,8 @@ const INITIAL_STATE = {
   parsed: "",
   created: false,
   noteID: "",
-  notes: {}
+  notes: {},
+  saving: false
 };
 
 class HomePage extends Component {
@@ -67,14 +68,16 @@ class HomePage extends Component {
   debounceTitleChange = debounce(async title => {
     const noteRef = await getNoteRef(this.state.noteID);
     noteRef.update({ title: this.state.title });
-    console.log("debounced");
+    this.setState({ saving: false });
+    console.log("updated title");
   }, 1000);
 
   debounceInputChange = debounce(async input => {
     const noteRef = await getNoteRef(this.state.noteID);
     noteRef.update({ note: this.state.input });
+    this.setState({ saving: false });
     console.log("updated input");
-  }, 5000);
+  }, 3000);
 
   createNoteIfNeeded = async e => {
     await createNote({ title: this.state.title, note: this.state.input });
@@ -90,7 +93,7 @@ class HomePage extends Component {
 
   onChangeTitle = async e => {
     e.persist();
-    this.setState({ title: e.target.value });
+    this.setState({ title: e.target.value, saving: true });
     if (!this.state.created) this.createNoteIfNeeded(e);
     else this.debounceTitleChange(e.target.value);
   };
@@ -100,7 +103,8 @@ class HomePage extends Component {
     const parsed = md.render(e.target.value);
     this.setState({
       parsed: parsed,
-      input: e.target.value
+      input: e.target.value,
+      saving: true
     });
     if (!this.state.created) this.createNoteIfNeeded(e);
     else this.debounceInputChange(e.target.value);
@@ -117,15 +121,20 @@ class HomePage extends Component {
             className={"navigation"}
           />
           <div className="left">
-            <input
-              placeholder={"Title"}
-              autoFocus
-              name={"title"}
-              value={this.state.title}
-              className={"title"}
-              onChange={this.onChangeTitle}
-              autoComplete={"off"}
-            />
+            <div>
+              <p className="saving">
+                {this.state.saving ? "Saving..." : "Saved"}
+              </p>
+              <input
+                placeholder={"Title"}
+                autoFocus
+                name={"title"}
+                value={this.state.title}
+                className={"title"}
+                onChange={this.onChangeTitle}
+                autoComplete={"off"}
+              />
+            </div>
             <textarea
               placeholder={"Your note..."}
               name={"input"}
@@ -136,7 +145,7 @@ class HomePage extends Component {
             />
           </div>
           <div className="right">
-            <h1>{this.state.title}</h1>
+            <h1 className={"main-heading"}>{this.state.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: this.state.parsed }} />
           </div>
         </div>

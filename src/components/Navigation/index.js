@@ -26,20 +26,22 @@ const Navigation = props => (
 const NavigationAuth = props => {
   return (
     <div className={"navigation"}>
-      <h1>NotAble</h1>
-      <Link to={ROUTES.HOME}>Home</Link>
-      <Link to={ROUTES.ACCOUNT}>Account</Link>
-      {props.notes ? (
-        <div className={"notes"}>
-          <button onClick={props.createNewNote}>Create new</button>
-          <h5>Your notes:</h5>
-          {Object.keys(props.notes).map(note => (
-            <p onClick={() => props.loadNote(note)} key={note}>
-              {props.notes[note].title}
-            </p>
-          ))}
-        </div>
-      ) : null}
+      <div className={"nav-contents"}>
+        <h1>NotAble</h1>
+        <Link to={ROUTES.HOME}>Home</Link>
+        <Link to={ROUTES.ACCOUNT}>Account</Link>
+        {props.notes ? (
+          <div className={"notes"}>
+            <button onClick={props.createNewNote}>Create new</button>
+            <h2>Your notes</h2>
+            {Object.keys(props.notes).map(note => (
+              <p onClick={() => props.loadNote(note)} key={note}>
+                {props.notes[note].title}
+              </p>
+            ))}
+          </div>
+        ) : null}
+      </div>
       <SignOutButton />
     </div>
   );

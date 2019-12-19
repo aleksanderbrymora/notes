@@ -15,6 +15,11 @@
   display: flex;
   flex-direction: column;
   color: white;
+  justify-content: space-between;
+}
+.navigation .nav-contents {
+  display: flex;
+  flex-direction: column;
 }
 .navigation h1 {
   margin: 2rem 0;
@@ -26,7 +31,12 @@
 .navigation a {
   text-decoration: none;
   color: white;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+.navigation a:hover {
+  font-weight: bold;
 }
 .navigation p {
   color: white;
@@ -39,9 +49,10 @@
   font-size: 16px;
   font-weight: bold;
   color: black;
-  margin: 10px 0;
+  margin: 10px auto;
   transition: all 0.5s;
   cursor: pointer;
+  width: fit-content;
 }
 .navigation button:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -87,6 +98,9 @@
 .page .right h1 {
   color: deeppink;
   margin-bottom: 2rem;
+  font-size: 30px;
+}
+.page .right .main-heading {
   font-size: 36px;
 }
 .page .right p {
@@ -103,6 +117,20 @@ code {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.notes h2 {
+  color: deeppink;
+  margin: 1rem 0 0.5rem 0;
+}
+.notes p {
+  border-left: 2px solid deeppink;
+  margin: 10px 0;
+  padding: 5px;
+  cursor: pointer;
+}
+.notes p:hover {
+  border-left: 4px solid #ff67cb;
 }
 
 /*# sourceMappingURL=style.css.map */
