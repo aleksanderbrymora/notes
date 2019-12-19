@@ -1,36 +1,39 @@
-import app from 'firebase/app';
-import 'firebase/auth';
+import app from "firebase/app";
+import "firebase/auth";
+import "firebase/database";
 
 const config = {
-	apiKey: "AIzaSyAkzU0nhZD6uRCHaMfTCXkcDyexkuSRErQ",
-	authDomain: "notes-d5887.firebaseapp.com",
-	databaseURL: "https://notes-d5887.firebaseio.com",
-	projectId: "notes-d5887",
-	storageBucket: "notes-d5887.appspot.com",
-	messagingSenderId: "651876624694",
-	appId: "1:651876624694:web:04c501c12f1c8f524b2b97",
-	measurementId: "G-DN7T1WBZHF"
+  apiKey: "AIzaSyAkzU0nhZD6uRCHaMfTCXkcDyexkuSRErQ",
+  authDomain: "notes-d5887.firebaseapp.com",
+  databaseURL: "https://notes-d5887.firebaseio.com",
+  projectId: "notes-d5887",
+  storageBucket: "notes-d5887.appspot.com",
+  messagingSenderId: "651876624694",
+  appId: "1:651876624694:web:04c501c12f1c8f524b2b97",
+  measurementId: "G-DN7T1WBZHF"
 };
 
 class Firebase {
-	constructor() {
-		app.initializeApp(config);
-		this.auth = app.auth();
-	}
+  constructor() {
+    app.initializeApp(config);
+    this.auth = app.auth();
+    this.db = app.database();
+  }
 
-	// AUTHORIZATION
-	doCreateUserWithEmailAndPassword = (email, password) =>
-		this.auth.createUserWithEmailAndPassword(email, password);
+  // AUTHORIZATION
+  doCreateUserWithEmailAndPassword = (email, password) =>
+    this.auth.createUserWithEmailAndPassword(email, password);
 
-	doSignInWithEmailAndPassword = (email, password) =>
-		this.auth.signInWithEmailAndPassword(email, password);
+  doSignInWithEmailAndPassword = (email, password) =>
+    this.auth.signInWithEmailAndPassword(email, password);
 
-	doSignOut = () => this.auth.signOut();
+  doSignOut = () => this.auth.signOut();
 
-	doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
+  doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
 
-	doPasswordUpdate = password =>
-		this.auth.currentUser.updatePassword(password);
+  doPasswordUpdate = password => this.auth.currentUser.updatePassword(password);
+
+  user = uid => this.db.ref(`users/${uid}`);
 }
 
 export default Firebase;

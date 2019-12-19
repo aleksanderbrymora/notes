@@ -2,12 +2,16 @@ import React, { Component } from "react";
 import { withAuthorization } from "../Session";
 import loader from "../Resources/loader.gif";
 import Markdown from "markdown-it";
+import Navigation from "../Navigation";
+import { debounce } from "underscore";
+import { createNote, getAllNotes } from "../Firebase/notes";
 
 const INITIAL_STATE = {
   isFetchDone: false,
   title: "",
   input: "",
-  parsed: ""
+  parsed: "",
+  notes: []
 };
 
 class HomePage extends Component {
@@ -17,6 +21,14 @@ class HomePage extends Component {
   }
 
   async componentDidMount() {
+    await createNote({ title: this.state.title, note: this.state.input });
+    console.log("Created new note");
+
+    const fetchedNotes = await getAllNotes();
+    console.log(fetchedNotes);
+    this.setState({ notes: fetchedNotes });
+
+    console.log(this.state);
     this.setState({ isFetchDone: true });
   }
 
@@ -35,6 +47,7 @@ class HomePage extends Component {
     if (this.state.isFetchDone) {
       return (
         <div className={"page"}>
+          <Navigation notes={this.state.notes} className={"navigation"} />
           <div className="left">
             <input
               placeholder={"Title"}
@@ -55,7 +68,6 @@ class HomePage extends Component {
           <div className="right">
             <h1>{this.state.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: this.state.parsed }} />
-            {/*<ParsedMarkdown markdown={this.state.parsed} />*/}
           </div>
         </div>
       );
