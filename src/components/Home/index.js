@@ -91,7 +91,7 @@ class HomePage extends Component {
     noteRef.update({ note: this.state.input });
     this.setState({ saving: false });
     console.log("updated input");
-  }, 3000);
+  }, 2000);
 
   createNoteIfNeeded = async e => {
     await createNote({ title: this.state.title, note: this.state.input });
@@ -138,7 +138,11 @@ class HomePage extends Component {
           <div className="left">
             <div>
               <p className="saving">
-                {this.state.saving ? "Saving..." : "Saved"}
+                {this.state.created
+                  ? this.state.saving
+                    ? "Saving..."
+                    : "Saved"
+                  : null}
               </p>
               <input
                 placeholder={"Title"}
