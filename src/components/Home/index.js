@@ -3,15 +3,15 @@ import { withAuthorization } from "../Session";
 import loader from "../Resources/loader.gif";
 import Markdown from "markdown-it";
 import Navigation from "../Navigation";
-import { debounce } from "underscore";
-import { createNote, getAllNotes } from "../Firebase/notes";
+// import { debounce } from "underscore";
+import { createNote, getAllNotes, getNotesRef } from "../Firebase/notes";
 
 const INITIAL_STATE = {
   isFetchDone: false,
   title: "",
   input: "",
   parsed: "",
-  notes: []
+  notes: {}
 };
 
 class HomePage extends Component {
@@ -24,22 +24,13 @@ class HomePage extends Component {
     await createNote({ title: this.state.title, note: this.state.input });
     console.log("Created new note");
 
-    const fetchedNotes = await getAllNotes();
-    console.log(fetchedNotes);
-    this.setState({ notes: fetchedNotes });
-
-    console.log(this.state);
-    this.setState({ isFetchDone: true });
-
-    // await getAllNotes()
-    //     .then(notes => {
-    //       // console.log(notes);
-    //       this.setState({ notes: notes });
-    //     })
-    //     .then(notes => {
-    //       console.log(this.state);
-    //       this.setState({ isFetchDone: true });
-    //     });
+    const fetchedNotesRef = await getNotesRef();
+    await fetchedNotesRef.on("value", res =>
+      this.setState({
+        notes: res.val(),
+        isFetchDone: true
+      })
+    );
   }
 
   onChangeTitle = e => this.setState({ title: e.target.value });
@@ -54,6 +45,7 @@ class HomePage extends Component {
   };
 
   render() {
+    // console.log(this.state);
     if (this.state.isFetchDone) {
       return (
         <div className={"page"}>

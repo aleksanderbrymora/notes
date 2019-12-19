@@ -15,7 +15,7 @@ const Navigation = () => (
 );
 
 const NavigationAuth = props => {
-  if (!!props.notes) {
+  if (props.notes) {
     return (
       <div>
         <ul>
@@ -29,8 +29,8 @@ const NavigationAuth = props => {
           </div>
           <button>Create new</button>
           <p>Your notes</p>
-          {props.notes.map(note => (
-            <p>Note: {note.title}</p>
+          {Object.keys(props.notes).map(note => (
+            <p>Note: {props.notes[note].title}</p>
           ))}
           <div className="user-nav">
             <li>
