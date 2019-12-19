@@ -1,42 +1,67 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-
 import SignOutButton from "../SignOut";
 import * as ROUTES from "../../constants/routes";
 import { AuthUserContext } from "../Session";
 
-const Navigation = () => (
-  <div className={"navigation"}>
-    <h1>NotAble</h1>
+import profile from "../Resources/0.png";
+import home from "../Resources/home.png";
+import trash from "../Resources/trash.png";
+
+const Navigation = props => (
+  <div>
     <AuthUserContext.Consumer>
-      {authUser => (authUser ? <NavigationAuth /> : <NavigationNonAuth />)}
+      {authUser =>
+        authUser ? (
+          <NavigationAuth
+            notes={props.notes}
+            loadNote={props.loadNote}
+            createNewNote={props.createNewNote}
+            deleteNote={props.deleteNote}
+          />
+        ) : (
+          <NavigationNonAuth />
+        )
+      }
     </AuthUserContext.Consumer>
   </div>
 );
 
 const NavigationAuth = props => {
   return (
-    <div>
-      <ul>
-        <div className="basic-nav">
-          <li>
-            <Link to={ROUTES.HOME}>Home</Link>
-          </li>
-          <li>
-            <Link to={ROUTES.ACCOUNT}>Account</Link>
-          </li>
+    <div className={"navigation"}>
+      <div className={"nav-contents"}>
+        <h1>NotAble</h1>
+        <div className="link-icon">
+          <img src={home} alt="Home" />
+          <Link to={ROUTES.HOME}>Home</Link>
         </div>
-        <button>Create new</button>
-        <p>Your notes</p>
-        {props.notes.map(note => (
-          <p>Note: {note.title}</p>
-        ))}
-        <div className="user-nav">
-          <li>
-            <SignOutButton />
-          </li>
+        <div className="link-icon">
+          <img src={profile} alt="Profile" />
+          <Link to={ROUTES.ACCOUNT}>Account</Link>
         </div>
-      </ul>
+        {props.notes ? (
+          <div className={"notes"}>
+            <button onClick={props.createNewNote}>Create new</button>
+            <h2>Your notes</h2>
+            {Object.keys(props.notes)
+              .reverse()
+              .map(note => (
+                <div className="note-list" key={note}>
+                  <p onClick={() => props.loadNote(note)}>
+                    {props.notes[note].title}
+                  </p>
+                  <img
+                    src={trash}
+                    alt="Trash"
+                    onClick={() => props.deleteNote(note)}
+                  />
+                </div>
+              ))}
+          </div>
+        ) : null}
+      </div>
+      <SignOutButton />
     </div>
   );
 };

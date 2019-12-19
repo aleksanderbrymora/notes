@@ -1,23 +1,22 @@
-import firebase from "firebase";
+import app from "firebase/app";
 
-const getNotesRef = async () =>
-  await firebase
-    .database()
-    .ref(`users/${JSON.parse(localStorage.getItem("authUser")).id}/notes`);
+export const getNotesRef = async () =>
+  JSON.parse(localStorage.getItem("authUser"))
+    ? await app
+        .database()
+        .ref(`users/${JSON.parse(localStorage.getItem("authUser")).id}/notes`)
+    : null;
+
+export const getNoteRef = async id =>
+  JSON.parse(localStorage.getItem("authUser")).id
+    ? await app
+        .database()
+        .ref(
+          `users/${JSON.parse(localStorage.getItem("authUser")).id}/notes/${id}`
+        )
+    : null;
 
 export const createNote = async note => {
   const ref = await getNotesRef();
-  // ref.push(note);
-};
-
-export const updateNote = async note => {
-  const ref = await getNotesRef();
-};
-
-export const getAllNotes = async () => {
-  const ref = await getNotesRef();
-  return await ref.on("value", res => {
-    console.log(res.val());
-    return res.val();
-  });
+  ref.push(note);
 };

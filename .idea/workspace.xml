@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04b3d6d5-cba9-4169-9cd8-2d33ab6ed562" name="Default Changelist" comment="">
+    <list default="true" id="971c3e6c-0dcb-472a-a96f-3c7802505987" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,16 +33,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Navigation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Resources" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Resources" />
       <recent name="$PROJECT_DIR$/src/components/Navigation" />
     </key>
   </component>
@@ -63,7 +69,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="04b3d6d5-cba9-4169-9cd8-2d33ab6ed562" name="Default Changelist" comment="" />
+      <changelist id="971c3e6c-0dcb-472a-a96f-3c7802505987" name="Default Changelist" comment="" />
       <created>1576560507690</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -71,7 +77,9 @@
       <workItem from="1576560509069" duration="16037000" />
       <workItem from="1576619808349" duration="7428000" />
       <workItem from="1576633383476" duration="1124000" />
-      <workItem from="1576635642410" duration="11953000" />
+      <workItem from="1576635642410" duration="11823000" />
+      <workItem from="1576728374116" duration="10439000" />
+      <workItem from="1576746626400" duration="4342000" />
     </task>
     <task id="LOCAL-00001" summary="Added styling, scaffold is pretty much done (oh im so wrong...)">
       <created>1576570434247</created>
@@ -87,21 +95,56 @@
       <option name="project" value="LOCAL" />
       <updated>1576636857779</updated>
     </task>
-    <task id="LOCAL-00003" summary="Trying to get the download list happening">
-      <created>1576713340422</created>
+    <task id="LOCAL-00003" summary="I have no idea how to fix /src/Firebase/notes...">
+      <created>1576716626579</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1576713340422</updated>
+      <updated>1576716626579</updated>
     </task>
-    <task id="LOCAL-00004" summary="Trying to get the download list happening">
-      <created>1576713348522</created>
+    <task id="LOCAL-00004" summary="Fetching notes works">
+      <created>1576718990877</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1576713348528</updated>
+      <updated>1576718990877</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Notes are now updated and user is able to create new ones, and edit">
+      <created>1576733867746</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1576733867746</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Display info about saving">
+      <created>1576737078065</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1576737078065</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added delete note">
+      <created>1576740550566</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1576740550566</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Cleaned up styling">
+      <created>1576749259760</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1576749259760</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added navbar where needed">
+      <created>1576753962567</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1576753962567</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,52 +157,79 @@
     <MESSAGE value="added local storage, and user persistence" />
     <MESSAGE value="added local storage, and user persistence, updated the gitignore" />
     <MESSAGE value="in some weird cors stuff comes up edit the json.parse in the withAuthentication.js" />
-    <MESSAGE value="Trying to get the download list happening" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to get the download list happening" />
+    <MESSAGE value="I have no idea how to fix /src/Firebase/notes..." />
+    <MESSAGE value="Fetching notes works" />
+    <MESSAGE value="Notes are now updated and user is able to create new ones, and edit" />
+    <MESSAGE value="Display info about saving" />
+    <MESSAGE value="Added delete note" />
+    <MESSAGE value="Cleaned up styling" />
+    <MESSAGE value="Added navbar where needed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added navbar where needed" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="875" y="395" width="800" height="686" key="#ESLint" timestamp="1576715823412">
+      <screen x="0" y="27" width="2560" height="1413" />
+    </state>
+    <state x="875" y="395" width="800" height="686" key="#ESLint/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576715823412" />
+    <state x="963" y="461" width="624" height="553" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1576713566589">
+      <screen x="0" y="27" width="2560" height="1413" />
+    </state>
+    <state x="963" y="461" width="624" height="553" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576713566589" />
     <state x="1013" y="482" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576560542723">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="1013" y="482" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576560542723" />
-    <state x="307" y="23" width="912" height="877" key="CommitChangelistDialog2" timestamp="1576713348164">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="843" y="247" width="912" height="877" key="CommitChangelistDialog2" timestamp="1576753962512">
+      <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state x="307" y="23" width="912" height="877" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1576713348164" />
-    <state x="843" y="247" width="864" height="981" key="CommitChangelistDialog2/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576570434185" />
+    <state x="307" y="23" width="912" height="877" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1576713339614" />
+    <state x="843" y="247" width="864" height="981" key="CommitChangelistDialog2/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576753962512" />
     <state x="822" y="514" width="906" height="448" key="EditFileWatcherDialog" timestamp="1576571383665">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="822" y="514" width="906" height="448" key="EditFileWatcherDialog/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576571383665" />
-    <state width="1419" height="219" key="GridCell.Tab.0.bottom" timestamp="1576633358025">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="2512" height="375" key="GridCell.Tab.0.bottom" timestamp="1576714752848">
+      <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state width="1419" height="219" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1576633358025" />
-    <state width="1419" height="219" key="GridCell.Tab.0.center" timestamp="1576633358022">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="2512" height="375" key="GridCell.Tab.0.bottom/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576714752848" />
+    <state width="2512" height="375" key="GridCell.Tab.0.center" timestamp="1576714752848">
+      <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state width="1419" height="219" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1576633358022" />
-    <state width="1419" height="219" key="GridCell.Tab.0.left" timestamp="1576633358021">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="2512" height="375" key="GridCell.Tab.0.center/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576714752848" />
+    <state width="2512" height="375" key="GridCell.Tab.0.left" timestamp="1576714752848">
+      <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state width="1419" height="219" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1576633358021" />
-    <state width="1419" height="219" key="GridCell.Tab.0.right" timestamp="1576633358023">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="2512" height="375" key="GridCell.Tab.0.left/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576714752848" />
+    <state width="2512" height="375" key="GridCell.Tab.0.right" timestamp="1576714752848">
+      <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state width="1419" height="219" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1576633358023" />
-    <state x="433" y="200" width="900" height="700" key="SettingsEditor" timestamp="1576636934283">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="2512" height="375" key="GridCell.Tab.0.right/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576714752848" />
+    <state x="769" y="368" width="900" height="700" key="SettingsEditor" timestamp="1576746733852">
+      <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="433" y="200" width="900" height="700" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1576636934283" />
-    <state x="769" y="368" width="1022" height="739" key="SettingsEditor/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576571385733" />
-    <state x="492" y="282" width="507" height="343" key="Vcs.Push.Dialog.v2" timestamp="1576713352638">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="769" y="368" width="1022" height="739" key="SettingsEditor/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576746733852" />
+    <state x="875" y="469" width="507" height="343" key="Vcs.Push.Dialog.v2" timestamp="1576753963713">
+      <screen x="0" y="27" width="2560" height="1413" />
     </state>
-    <state x="492" y="282" width="507" height="343" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1576713352638" />
-    <state x="875" y="469" width="800" height="537" key="Vcs.Push.Dialog.v2/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576570438585" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1576621379295">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="492" y="282" width="507" height="343" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1576636859797" />
+    <state x="875" y="469" width="800" height="537" key="Vcs.Push.Dialog.v2/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576753963713" />
+    <state x="944" y="341" key="run.anything.popup" timestamp="1576721019498">
+      <screen x="0" y="27" width="2560" height="1413" />
+    </state>
+    <state x="944" y="341" key="run.anything.popup/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576721019498" />
+    <state x="684" y="335" width="1192" height="1062" key="search.everywhere.popup" timestamp="1576731557071">
+      <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1576621379295" />
+    <state x="684" y="335" width="1192" height="1062" key="search.everywhere.popup/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576731557071" />
+    <state x="1005" y="563" width="540" height="349" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1576741025305">
+      <screen x="0" y="27" width="2560" height="1413" />
+    </state>
+    <state x="1005" y="563" width="540" height="349" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576741025305" />
   </component>
 </project>
