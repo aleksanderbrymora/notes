@@ -8,12 +8,11 @@ import NavTop from "../Navigation/NavTop";
 const AccountPage = () => (
   <AuthUserContext.Consumer>
     {authUser => (
-      <>
+      <div>
         <NavTop />
-        <h3 id={"manage-account-title"}>Manage your account</h3>
         <PasswordForgetForm />
         <PasswordChangeForm />
-      </>
+      </div>
     )}
   </AuthUserContext.Consumer>
 );

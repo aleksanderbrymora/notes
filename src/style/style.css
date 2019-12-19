@@ -41,22 +41,6 @@
 .navigation p {
   color: white;
 }
-.navigation button {
-  border: none;
-  background-color: white;
-  border-radius: 5px;
-  padding: 5px 15px;
-  font-size: 16px;
-  font-weight: bold;
-  color: black;
-  margin: 10px auto;
-  transition: all 0.5s;
-  cursor: pointer;
-  width: fit-content;
-}
-.navigation button:hover {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
 .navigation .link-icon {
   display: flex;
   flex-direction: row;
@@ -153,6 +137,83 @@ code {
 }
 .notes p:hover {
   border-left: 4px solid #ff67cb;
+}
+
+.nav-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background-color: blue;
+}
+.nav-top h1 {
+  color: white;
+  text-decoration: none;
+  text-underline: none;
+}
+.nav-top div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav-top div a {
+  text-decoration: none;
+  color: white;
+  margin: 0 0.5rem;
+  font-size: 20px;
+  cursor: pointer;
+}
+.nav-top div a:hover {
+  font-weight: bold;
+}
+.nav-top div h1 {
+  margin-right: 5rem;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 2rem;
+}
+.form-input form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-input form input {
+  border: none;
+  padding: 10px 0;
+  border-bottom: 2px solid blue;
+  font-size: 12px;
+  margin-top: 15px;
+  width: 100%;
+}
+.form-input form input:focus {
+  outline: none;
+}
+.form-input form button {
+  border: blue 2px solid;
+  margin: 5px;
+}
+
+button {
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  transition: all 0.5s;
+  cursor: pointer;
+  width: fit-content;
+}
+
+button:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */

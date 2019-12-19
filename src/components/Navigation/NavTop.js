@@ -6,8 +6,7 @@ import * as ROUTES from "../../constants/routes";
 import { AuthUserContext } from "../Session";
 
 const Navigation = () => (
-  <div className={"navigation"}>
-    <h1>NotAble</h1>
+  <div>
     <AuthUserContext.Consumer>
       {authUser => (authUser ? <NavigationAuth /> : <NavigationNonAuth />)}
     </AuthUserContext.Consumer>
@@ -17,40 +16,30 @@ const Navigation = () => (
 class NavigationAuth extends Component {
   render() {
     return (
-      <div>
-        <ul>
-          <div>
-            <li>
-              <Link to={ROUTES.HOME}>Home</Link>
-            </li>
-            <li>
-              <Link to={ROUTES.ACCOUNT}>Account</Link>
-            </li>
-          </div>
-          <div>
-            <li>
-              <SignOutButton />
-            </li>
-          </div>
-        </ul>
+      <div className={"nav-top"}>
+        <div>
+          <Link to={ROUTES.HOME}>
+            <h1>NotAble</h1>
+          </Link>
+          <Link to={ROUTES.HOME}>Home</Link>
+          <Link to={ROUTES.ACCOUNT}>Account</Link>
+        </div>
+        <SignOutButton />
       </div>
     );
   }
 }
 
 const NavigationNonAuth = () => (
-  <ul>
-    <div className="basic-nav">
-      <li>
-        <Link to={ROUTES.LANDING}>Discover the app</Link>
-      </li>
+  <div className={"nav-top"}>
+    <Link to={ROUTES.LANDING}>
+      <h1>NotAble</h1>
+    </Link>
+    <div>
+      <Link to={ROUTES.LANDING}>Discover the app</Link>
+      <Link to={ROUTES.SIGN_IN}>Sign In</Link>
     </div>
-    <div className="user-nav">
-      <li>
-        <Link to={ROUTES.SIGN_IN}>Sign In</Link>
-      </li>
-    </div>
-  </ul>
+  </div>
 );
 
 export default Navigation;
