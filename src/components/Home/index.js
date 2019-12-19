@@ -3,14 +3,16 @@ import { withAuthorization } from "../Session";
 import loader from "../Resources/loader.gif";
 import Markdown from "markdown-it";
 import Navigation from "../Navigation";
-// import { debounce } from "underscore";
-import { createNote, getAllNotes, getNotesRef } from "../Firebase/notes";
+import { debounce } from "underscore";
+import { createNote, getNotesRef, getNoteRef } from "../Firebase/notes";
 
 const INITIAL_STATE = {
   isFetchDone: false,
   title: "",
   input: "",
   parsed: "",
+  created: false,
+  noteID: "",
   notes: {}
 };
 
@@ -21,19 +23,51 @@ class HomePage extends Component {
   }
 
   async componentDidMount() {
-    await createNote({ title: this.state.title, note: this.state.input });
-    console.log("Created new note");
-
     const fetchedNotesRef = await getNotesRef();
-    await fetchedNotesRef.on("value", res =>
+    await fetchedNotesRef.on("value", res => {
       this.setState({
         notes: res.val(),
         isFetchDone: true
-      })
-    );
+      });
+    });
   }
 
-  onChangeTitle = e => this.setState({ title: e.target.value });
+  createNewNote = async () => {
+    this.setState({
+      title: "",
+      input: "",
+      noteID: "",
+      created: false
+    });
+    console.log("Created new note");
+  };
+
+  debounceTitleChange = debounce(async title => {
+    // todo debounce changes to title and send them to db
+    const noteRef = await getNoteRef(this.state.noteID);
+    noteRef.update({ title: this.state.title });
+    console.log("debounced");
+  }, 1000);
+
+  onChangeTitle = async e => {
+    e.persist();
+    this.setState({ title: e.target.value });
+    if (!this.state.created) {
+      await createNote({ title: this.state.title, note: this.state.input });
+      const fetchedNotesRef = await getNotesRef();
+      await fetchedNotesRef.on("value", res => {
+        const notesKeys = Object.keys(res.val());
+        this.setState({
+          noteID: notesKeys[notesKeys.length - 1],
+          title: e.target.value,
+          created: true
+        });
+        console.log(this.state.noteID);
+      });
+    } else {
+      this.debounceTitleChange(e.target.value);
+    }
+  };
 
   onChangeInput = e => {
     const md = new Markdown();
@@ -45,11 +79,14 @@ class HomePage extends Component {
   };
 
   render() {
-    // console.log(this.state);
     if (this.state.isFetchDone) {
       return (
         <div className={"page"}>
-          <Navigation notes={this.state.notes} className={"navigation"} />
+          <Navigation
+            createNewNote={this.createNewNote}
+            notes={this.state.notes}
+            className={"navigation"}
+          />
           <div className="left">
             <input
               placeholder={"Title"}

@@ -1,46 +1,60 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import SignOutButton from "../SignOut";
 import * as ROUTES from "../../constants/routes";
 import { AuthUserContext } from "../Session";
 
-const Navigation = () => (
+const Navigation = props => (
   <div className={"navigation"}>
     <h1>NotAble</h1>
     <AuthUserContext.Consumer>
-      {authUser => (authUser ? <NavigationAuth /> : <NavigationNonAuth />)}
+      {authUser =>
+        authUser ? (
+          <NavigationAuth
+            notes={props.notes}
+            createNewNote={props.createNewNote}
+          />
+        ) : (
+          <NavigationNonAuth />
+        )
+      }
     </AuthUserContext.Consumer>
   </div>
 );
 
 const NavigationAuth = props => {
-  if (props.notes) {
-    return (
-      <div>
-        <ul>
-          <div className="basic-nav">
-            <li>
-              <Link to={ROUTES.HOME}>Home</Link>
-            </li>
-            <li>
-              <Link to={ROUTES.ACCOUNT}>Account</Link>
-            </li>
+  return (
+    <div>
+      <ul>
+        <div className="basic-nav">
+          <li>
+            <Link to={ROUTES.HOME}>Home</Link>
+          </li>
+          <li>
+            <Link to={ROUTES.ACCOUNT}>Account</Link>
+          </li>
+        </div>
+        {props.notes ? (
+          <div>
+            <button onClick={props.createNewNote}>Create new</button>
+            <p>Your notes:</p>
+            {Object.keys(props.notes).map(note => (
+              <p onClick={() => console.log(note)} key={note}>
+                {props.notes[note].title}
+              </p>
+            ))}
           </div>
-          <button>Create new</button>
-          <p>Your notes</p>
-          {Object.keys(props.notes).map(note => (
-            <p>Note: {props.notes[note].title}</p>
-          ))}
-          <div className="user-nav">
-            <li>
-              <SignOutButton />
-            </li>
-          </div>
-        </ul>
-      </div>
-    );
-  } else return null;
+        ) : null}
+
+        <div className="user-nav">
+          <li>
+            <SignOutButton />
+          </li>
+        </div>
+      </ul>
+    </div>
+  );
 };
 
 const NavigationNonAuth = () => (
