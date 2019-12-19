@@ -15,30 +15,32 @@ const Navigation = () => (
 );
 
 const NavigationAuth = props => {
-  return (
-    <div>
-      <ul>
-        <div className="basic-nav">
-          <li>
-            <Link to={ROUTES.HOME}>Home</Link>
-          </li>
-          <li>
-            <Link to={ROUTES.ACCOUNT}>Account</Link>
-          </li>
-        </div>
-        <button>Create new</button>
-        <p>Your notes</p>
-        {props.notes.map(note => (
-          <p>Note: {note.title}</p>
-        ))}
-        <div className="user-nav">
-          <li>
-            <SignOutButton />
-          </li>
-        </div>
-      </ul>
-    </div>
-  );
+  if (!!props.notes) {
+    return (
+      <div>
+        <ul>
+          <div className="basic-nav">
+            <li>
+              <Link to={ROUTES.HOME}>Home</Link>
+            </li>
+            <li>
+              <Link to={ROUTES.ACCOUNT}>Account</Link>
+            </li>
+          </div>
+          <button>Create new</button>
+          <p>Your notes</p>
+          {props.notes.map(note => (
+            <p>Note: {note.title}</p>
+          ))}
+          <div className="user-nav">
+            <li>
+              <SignOutButton />
+            </li>
+          </div>
+        </ul>
+      </div>
+    );
+  } else return null;
 };
 
 const NavigationNonAuth = () => (

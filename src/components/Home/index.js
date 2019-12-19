@@ -30,6 +30,16 @@ class HomePage extends Component {
 
     console.log(this.state);
     this.setState({ isFetchDone: true });
+
+    // await getAllNotes()
+    //     .then(notes => {
+    //       // console.log(notes);
+    //       this.setState({ notes: notes });
+    //     })
+    //     .then(notes => {
+    //       console.log(this.state);
+    //       this.setState({ isFetchDone: true });
+    //     });
   }
 
   onChangeTitle = e => this.setState({ title: e.target.value });
