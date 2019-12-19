@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="971c3e6c-0dcb-472a-a96f-3c7802505987" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PasswordForget/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PasswordForget/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SignUp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignUp/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +79,7 @@
       <workItem from="1576633383476" duration="1124000" />
       <workItem from="1576635642410" duration="11823000" />
       <workItem from="1576728374116" duration="10439000" />
-      <workItem from="1576746626400" duration="4070000" />
+      <workItem from="1576746626400" duration="4342000" />
     </task>
     <task id="LOCAL-00001" summary="Added styling, scaffold is pretty much done (oh im so wrong...)">
       <created>1576570434247</created>
@@ -140,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576749259760</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added navbar where needed">
+      <created>1576753962567</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1576753962567</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +162,8 @@
     <MESSAGE value="Display info about saving" />
     <MESSAGE value="Added delete note" />
     <MESSAGE value="Cleaned up styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up styling" />
+    <MESSAGE value="Added navbar where needed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added navbar where needed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="875" y="395" width="800" height="686" key="#ESLint" timestamp="1576715823412">
@@ -173,11 +178,11 @@
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="1013" y="482" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576560542723" />
-    <state x="843" y="247" width="912" height="877" key="CommitChangelistDialog2" timestamp="1576749259670">
+    <state x="843" y="247" width="912" height="877" key="CommitChangelistDialog2" timestamp="1576753962512">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="307" y="23" width="912" height="877" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1576713339614" />
-    <state x="843" y="247" width="864" height="981" key="CommitChangelistDialog2/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576749259670" />
+    <state x="843" y="247" width="864" height="981" key="CommitChangelistDialog2/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576753962512" />
     <state x="822" y="514" width="906" height="448" key="EditFileWatcherDialog" timestamp="1576571383665">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
@@ -207,11 +212,11 @@
     </state>
     <state x="433" y="200" width="900" height="700" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1576636934283" />
     <state x="769" y="368" width="1022" height="739" key="SettingsEditor/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576746733852" />
-    <state x="875" y="469" width="507" height="343" key="Vcs.Push.Dialog.v2" timestamp="1576749261322">
+    <state x="875" y="469" width="507" height="343" key="Vcs.Push.Dialog.v2" timestamp="1576753963713">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="492" y="282" width="507" height="343" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1576636859797" />
-    <state x="875" y="469" width="800" height="537" key="Vcs.Push.Dialog.v2/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576749261322" />
+    <state x="875" y="469" width="800" height="537" key="Vcs.Push.Dialog.v2/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576753963713" />
     <state x="944" y="341" key="run.anything.popup" timestamp="1576721019498">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
