@@ -4,7 +4,7 @@ import loader from "../Resources/loader.gif";
 import Markdown from "markdown-it";
 import Navigation from "../Navigation";
 import { debounce } from "underscore";
-import { createNote, getNotesRef, getNoteRef } from "../Firebase/notes";
+import { createNote, getNoteRef, getNotesRef } from "../Firebase/notes";
 
 const INITIAL_STATE = {
   isFetchDone: false,
