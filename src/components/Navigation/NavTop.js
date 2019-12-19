@@ -17,21 +17,23 @@ const Navigation = () => (
 class NavigationAuth extends Component {
   render() {
     return (
-      <ul>
-        <div className="basic-nav">
-          <li>
-            <Link to={ROUTES.HOME}>Home</Link>
-          </li>
-          <li>
-            <Link to={ROUTES.ACCOUNT}>Account</Link>
-          </li>
-        </div>
-        <div className="user-nav">
-          <li>
-            <SignOutButton />
-          </li>
-        </div>
-      </ul>
+      <div>
+        <ul>
+          <div>
+            <li>
+              <Link to={ROUTES.HOME}>Home</Link>
+            </li>
+            <li>
+              <Link to={ROUTES.ACCOUNT}>Account</Link>
+            </li>
+          </div>
+          <div>
+            <li>
+              <SignOutButton />
+            </li>
+          </div>
+        </ul>
+      </div>
     );
   }
 }

@@ -12,6 +12,9 @@
   padding: 1rem;
   margin-right: 1rem;
   border-right: 4px solid deeppink;
+  display: flex;
+  flex-direction: column;
+  color: white;
 }
 .navigation h1 {
   margin: 2rem 0;
@@ -99,8 +102,7 @@ code {
   z-index: 1;
   left: 50%;
   top: 50%;
-  transform: translateX(-50%);
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=style.css.map */

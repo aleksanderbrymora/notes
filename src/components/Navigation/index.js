@@ -6,13 +6,13 @@ import * as ROUTES from "../../constants/routes";
 import { AuthUserContext } from "../Session";
 
 const Navigation = props => (
-  <div className={"navigation"}>
-    <h1>NotAble</h1>
+  <div>
     <AuthUserContext.Consumer>
       {authUser =>
         authUser ? (
           <NavigationAuth
             notes={props.notes}
+            loadNote={props.loadNote}
             createNewNote={props.createNewNote}
           />
         ) : (
@@ -25,34 +25,22 @@ const Navigation = props => (
 
 const NavigationAuth = props => {
   return (
-    <div>
-      <ul>
-        <div className="basic-nav">
-          <li>
-            <Link to={ROUTES.HOME}>Home</Link>
-          </li>
-          <li>
-            <Link to={ROUTES.ACCOUNT}>Account</Link>
-          </li>
+    <div className={"navigation"}>
+      <h1>NotAble</h1>
+      <Link to={ROUTES.HOME}>Home</Link>
+      <Link to={ROUTES.ACCOUNT}>Account</Link>
+      {props.notes ? (
+        <div className={"notes"}>
+          <button onClick={props.createNewNote}>Create new</button>
+          <h5>Your notes:</h5>
+          {Object.keys(props.notes).map(note => (
+            <p onClick={() => props.loadNote(note)} key={note}>
+              {props.notes[note].title}
+            </p>
+          ))}
         </div>
-        {props.notes ? (
-          <div>
-            <button onClick={props.createNewNote}>Create new</button>
-            <p>Your notes:</p>
-            {Object.keys(props.notes).map(note => (
-              <p onClick={() => console.log(note)} key={note}>
-                {props.notes[note].title}
-              </p>
-            ))}
-          </div>
-        ) : null}
-
-        <div className="user-nav">
-          <li>
-            <SignOutButton />
-          </li>
-        </div>
-      </ul>
+      ) : null}
+      <SignOutButton />
     </div>
   );
 };

@@ -42,40 +42,68 @@ class HomePage extends Component {
     console.log("Created new note");
   };
 
+  loadNote = async noteID => {
+    this.setState({
+      title: "",
+      input: "",
+      noteID: noteID,
+      parsed: "",
+      created: true
+    });
+    getNoteRef(noteID).then(noteRef =>
+      noteRef.on("value", res => {
+        const noteInfo = res.val();
+        const md = new Markdown();
+        const parsed = md.render(noteInfo.note);
+        this.setState({
+          title: noteInfo.title,
+          input: noteInfo.note,
+          parsed
+        });
+      })
+    );
+  };
+
   debounceTitleChange = debounce(async title => {
-    // todo debounce changes to title and send them to db
     const noteRef = await getNoteRef(this.state.noteID);
     noteRef.update({ title: this.state.title });
     console.log("debounced");
   }, 1000);
 
+  debounceInputChange = debounce(async input => {
+    const noteRef = await getNoteRef(this.state.noteID);
+    noteRef.update({ note: this.state.input });
+    console.log("updated input");
+  }, 5000);
+
+  createNoteIfNeeded = async e => {
+    await createNote({ title: this.state.title, note: this.state.input });
+    const fetchedNotesRef = await getNotesRef();
+    await fetchedNotesRef.on("value", res => {
+      const notesKeys = Object.keys(res.val());
+      this.setState({
+        noteID: notesKeys[notesKeys.length - 1],
+        created: true
+      });
+    });
+  };
+
   onChangeTitle = async e => {
     e.persist();
     this.setState({ title: e.target.value });
-    if (!this.state.created) {
-      await createNote({ title: this.state.title, note: this.state.input });
-      const fetchedNotesRef = await getNotesRef();
-      await fetchedNotesRef.on("value", res => {
-        const notesKeys = Object.keys(res.val());
-        this.setState({
-          noteID: notesKeys[notesKeys.length - 1],
-          title: e.target.value,
-          created: true
-        });
-        console.log(this.state.noteID);
-      });
-    } else {
-      this.debounceTitleChange(e.target.value);
-    }
+    if (!this.state.created) this.createNoteIfNeeded(e);
+    else this.debounceTitleChange(e.target.value);
   };
 
-  onChangeInput = e => {
+  onChangeInput = async e => {
     const md = new Markdown();
     const parsed = md.render(e.target.value);
     this.setState({
       parsed: parsed,
       input: e.target.value
     });
+    if (!this.state.created) this.createNoteIfNeeded(e);
+    else this.debounceInputChange(e.target.value);
   };
 
   render() {
@@ -83,6 +111,7 @@ class HomePage extends Component {
       return (
         <div className={"page"}>
           <Navigation
+            loadNote={this.loadNote}
             createNewNote={this.createNewNote}
             notes={this.state.notes}
             className={"navigation"}
@@ -95,6 +124,7 @@ class HomePage extends Component {
               value={this.state.title}
               className={"title"}
               onChange={this.onChangeTitle}
+              autoComplete={"off"}
             />
             <textarea
               placeholder={"Your note..."}
@@ -102,6 +132,7 @@ class HomePage extends Component {
               value={this.state.input}
               className={"user-input"}
               onChange={this.onChangeInput}
+              autoComplete={"off"}
             />
           </div>
           <div className="right">
