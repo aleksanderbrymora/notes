@@ -57,6 +57,28 @@
 .navigation button:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
+.navigation .link-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.navigation .link-icon img {
+  margin: 0 10px 0 0;
+  width: 20px;
+  height: 20px;
+}
+.navigation .note-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation .note-list img {
+  margin: 0 10px 0 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
 
 .page {
   height: 100vh;

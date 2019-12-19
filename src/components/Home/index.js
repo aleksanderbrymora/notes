@@ -43,6 +43,19 @@ class HomePage extends Component {
     console.log("Created new note");
   };
 
+  deleteNote = async id => {
+    const noteRef = await getNoteRef(id);
+    noteRef.remove();
+    this.setState({
+      title: "",
+      input: "",
+      noteID: "",
+      parsed: "",
+      created: false
+    });
+    console.log("removed");
+  };
+
   loadNote = async noteID => {
     this.setState({
       title: "",
@@ -119,6 +132,7 @@ class HomePage extends Component {
             createNewNote={this.createNewNote}
             notes={this.state.notes}
             className={"navigation"}
+            deleteNote={this.deleteNote}
           />
           <div className="left">
             <div>
