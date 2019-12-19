@@ -38,6 +38,7 @@ class HomePage extends Component {
       title: "",
       input: "",
       noteID: "",
+      parsed: "",
       created: false
     });
     console.log("Created new note");
