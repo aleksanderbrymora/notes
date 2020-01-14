@@ -100,6 +100,7 @@
 .page .right {
   padding: 2rem;
   overflow-y: scroll;
+  line-height: 170%;
 }
 .page .right h1 {
   color: deeppink;
@@ -214,6 +215,11 @@ button {
 
 button:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.saving {
+  font-size: 12px;
+  color: gray;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,9 +4,13 @@
     <list default="true" id="971c3e6c-0dcb-472a-a96f-3c7802505987" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Firebase/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Firebase/firebase.js" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+>>>>>>> de407b48b24a58bb08771cc8e141c5bfc4b3ee46
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +55,9 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/Resources" />
       <recent name="$PROJECT_DIR$/src/components/Navigation" />
@@ -150,6 +157,7 @@
       <option name="project" value="LOCAL" />
       <updated>1576753962567</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00010" summary="Fixed small but deadly bug that prevented the login..">
       <created>1576754173214</created>
       <option name="number" value="00010" />
@@ -158,12 +166,37 @@
       <updated>1576754173214</updated>
     </task>
     <option name="localTasksCounter" value="11" />
+=======
+    <task id="LOCAL-00010" summary="Cleaned up stylesheet">
+      <created>1576788145842</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1576788145842</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fixed bug where a note would stay rendered after clicking new note">
+      <created>1576788653394</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1576788653394</updated>
+    </task>
+    <task id="LOCAL-00012" summary="save indicator only shows once we create the note">
+      <created>1576792051525</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1576792051526</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+>>>>>>> de407b48b24a58bb08771cc8e141c5bfc4b3ee46
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added styling, scaffold is pretty much done (oh im so wrong...)" />
     <MESSAGE value="added local storage, and user persistence" />
@@ -176,8 +209,15 @@
     <MESSAGE value="Added delete note" />
     <MESSAGE value="Cleaned up styling" />
     <MESSAGE value="Added navbar where needed" />
+<<<<<<< HEAD
     <MESSAGE value="Fixed small but deadly bug that prevented the login.." />
     <option name="LAST_COMMIT_MESSAGE" value="Fixed small but deadly bug that prevented the login.." />
+=======
+    <MESSAGE value="Cleaned up stylesheet" />
+    <MESSAGE value="fixed bug where a note would stay rendered after clicking new note" />
+    <MESSAGE value="save indicator only shows once we create the note" />
+    <option name="LAST_COMMIT_MESSAGE" value="save indicator only shows once we create the note" />
+>>>>>>> de407b48b24a58bb08771cc8e141c5bfc4b3ee46
   </component>
   <component name="WindowStateProjectService">
     <state x="875" y="395" width="800" height="686" key="#ESLint" timestamp="1576715823412">
@@ -192,11 +232,19 @@
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="1013" y="482" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576560542723" />
+<<<<<<< HEAD
     <state x="843" y="247" width="912" height="877" key="CommitChangelistDialog2" timestamp="1576754173168">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="307" y="23" width="912" height="877" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1576713339614" />
     <state x="843" y="247" width="864" height="981" key="CommitChangelistDialog2/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576754173168" />
+=======
+    <state x="307" y="23" width="912" height="877" key="CommitChangelistDialog2" timestamp="1576792051262">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="307" y="23" width="912" height="877" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1576792051262" />
+    <state x="843" y="247" width="864" height="981" key="CommitChangelistDialog2/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576753962512" />
+>>>>>>> de407b48b24a58bb08771cc8e141c5bfc4b3ee46
     <state x="822" y="514" width="906" height="448" key="EditFileWatcherDialog" timestamp="1576571383665">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
@@ -230,11 +278,19 @@
     </state>
     <state x="433" y="200" width="900" height="700" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1576636934283" />
     <state x="769" y="368" width="1022" height="739" key="SettingsEditor/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576746733852" />
+<<<<<<< HEAD
     <state x="875" y="469" width="507" height="343" key="Vcs.Push.Dialog.v2" timestamp="1576754175597">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="492" y="282" width="507" height="343" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1576636859797" />
     <state x="875" y="469" width="800" height="537" key="Vcs.Push.Dialog.v2/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576754175597" />
+=======
+    <state x="492" y="282" width="507" height="343" key="Vcs.Push.Dialog.v2" timestamp="1576792053169">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="492" y="282" width="507" height="343" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1576792053169" />
+    <state x="875" y="469" width="800" height="537" key="Vcs.Push.Dialog.v2/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576753963713" />
+>>>>>>> de407b48b24a58bb08771cc8e141c5bfc4b3ee46
     <state x="944" y="341" key="run.anything.popup" timestamp="1576721019498">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
