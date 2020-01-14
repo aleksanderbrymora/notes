@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="971c3e6c-0dcb-472a-a96f-3c7802505987" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Firebase/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Firebase/firebase.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +37,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,7 +83,9 @@
       <workItem from="1576633383476" duration="1124000" />
       <workItem from="1576635642410" duration="11823000" />
       <workItem from="1576728374116" duration="10439000" />
-      <workItem from="1576746626400" duration="4342000" />
+      <workItem from="1576746626400" duration="5016000" />
+      <workItem from="1577351032678" duration="42000" />
+      <workItem from="1578979861165" duration="589000" />
     </task>
     <task id="LOCAL-00001" summary="Added styling, scaffold is pretty much done (oh im so wrong...)">
       <created>1576570434247</created>
@@ -144,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576753962567</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fixed small but deadly bug that prevented the login..">
+      <created>1576754173214</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1576754173214</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +176,8 @@
     <MESSAGE value="Added delete note" />
     <MESSAGE value="Cleaned up styling" />
     <MESSAGE value="Added navbar where needed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added navbar where needed" />
+    <MESSAGE value="Fixed small but deadly bug that prevented the login.." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed small but deadly bug that prevented the login.." />
   </component>
   <component name="WindowStateProjectService">
     <state x="875" y="395" width="800" height="686" key="#ESLint" timestamp="1576715823412">
@@ -178,15 +192,19 @@
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="1013" y="482" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576560542723" />
-    <state x="843" y="247" width="912" height="877" key="CommitChangelistDialog2" timestamp="1576753962512">
+    <state x="843" y="247" width="912" height="877" key="CommitChangelistDialog2" timestamp="1576754173168">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="307" y="23" width="912" height="877" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1576713339614" />
-    <state x="843" y="247" width="864" height="981" key="CommitChangelistDialog2/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576753962512" />
+    <state x="843" y="247" width="864" height="981" key="CommitChangelistDialog2/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576754173168" />
     <state x="822" y="514" width="906" height="448" key="EditFileWatcherDialog" timestamp="1576571383665">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="822" y="514" width="906" height="448" key="EditFileWatcherDialog/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576571383665" />
+    <state x="1054" y="481" key="FileChooserDialogImpl" timestamp="1577351052655">
+      <screen x="0" y="27" width="2560" height="1413" />
+    </state>
+    <state x="1054" y="481" key="FileChooserDialogImpl/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1577351052654" />
     <state width="2512" height="375" key="GridCell.Tab.0.bottom" timestamp="1576714752848">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
@@ -212,11 +230,11 @@
     </state>
     <state x="433" y="200" width="900" height="700" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1576636934283" />
     <state x="769" y="368" width="1022" height="739" key="SettingsEditor/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576746733852" />
-    <state x="875" y="469" width="507" height="343" key="Vcs.Push.Dialog.v2" timestamp="1576753963713">
+    <state x="875" y="469" width="507" height="343" key="Vcs.Push.Dialog.v2" timestamp="1576754175597">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
     <state x="492" y="282" width="507" height="343" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1576636859797" />
-    <state x="875" y="469" width="800" height="537" key="Vcs.Push.Dialog.v2/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576753963713" />
+    <state x="875" y="469" width="800" height="537" key="Vcs.Push.Dialog.v2/0.27.2560.1413/2560.0.2560.1440@0.27.2560.1413" timestamp="1576754175597" />
     <state x="944" y="341" key="run.anything.popup" timestamp="1576721019498">
       <screen x="0" y="27" width="2560" height="1413" />
     </state>
